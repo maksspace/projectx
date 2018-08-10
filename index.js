@@ -71,8 +71,6 @@ class Git extends ProjectXBase {
 	}
 }
 
-// type-name-lang
-
 class Module extends ProjectXBase {
   constructor (name) {
     super();
@@ -176,6 +174,8 @@ class ProjectX extends ProjectXBase {
 		this._clasters = [];
 		this._modulesList = [];
 		this._git = new Git;
+		this._rootDirectoryPath = './.projectx';
+		this._buildedModulesPath = `${this._rootDirectoryPath}/modules`;
 	}
 
 	run () {
@@ -198,18 +198,16 @@ class ProjectX extends ProjectXBase {
 	}
 
 	_initRootDirectory () {
-		const rootDirectoryPath = './.projectx';
-		const buildedModulesPath = `${rootDirectoryPath}/modules`;
-		this._initDirectory(rootDirectoryPath);
-		this._initDirectory(buildedModulesPath);
+		this._initDirectory(this._rootDirectoryPath);
+		this._initDirectory(this._buildedModulesPath);
 	}
 
 	_getModules () {
-	  this._clasters.forEach(c => {
-	    c._projects.forEach(p => {
-	     	const projectRepos = p.getRepos();
-	 	});
-	  });
+	  // this._clasters.forEach(c => {
+	  //   c._projects.forEach(p => {
+	  //    	const projectRepos = p.getRepos();
+	 	// });
+	  // });
 	}
 }
 
