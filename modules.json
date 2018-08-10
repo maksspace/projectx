@@ -1,16 +1,30 @@
 [
 	{
 		"type": "api",
+		"name": "starter",
+		"base": [ "koa", "sequelize" ],
+		"repo": "https://github.com/maksspace/prx-api-starter-koa.git",
+		"lang": "js"
+	},
+	{
+		"type": "web",
+		"name": "starter",
+		"base": [ "vue" ],
+		"repo": "https://github.com/maksspace/prx-web-starter-vue.git",
+		"lang": "js"
+	},
+	{
+		"type": "api",
 		"name": "auth",
 		"base": [ "koa", "sequelize" ],
-		"repo": "",
+		"repo": "https://github.com/maksspace/prx-api-auth-js.git",
 		"lang": "js"
 	},
 	{
 		"type": "web",
 		"name": "auth",
 		"base": [ "vue" ],
-		"repo": "",
+		"repo": "https://github.com/maksspace/prx-web-auth-js.git",
 		"lang": "js"
 	}
 ]
